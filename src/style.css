@@ -46,6 +46,13 @@ img {
     max-width: 100%;
 }
 
+.heading__title {
+    font-size: calc(36px + 8 * ((100vw - 320px) / 680));
+    font-weight: 200;
+    text-align: center;
+    font-family: var(--primary-font);
+}
+
 
 /* header styling */
 header {
@@ -129,6 +136,211 @@ header {
         }
     }
 }
-
-
 /* ---------------header styling ---------------- */
+
+/* hero section styling */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #4e54c8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8f94fb, #4e54c8);
+
+    .container {
+
+        .title {
+            font-size: 20vw;
+            font-weight: 400;
+            color: var(--white-color);
+            text-align: center;
+            font-family: var(--secondary-font);
+            font-style: normal;
+            line-height: 0.9;
+        }
+
+        .post {
+            font-size: 2rem;
+            color: var(--white-color);
+            text-align: center;
+            margin-top: 1rem;
+            font-family: var(--secondary-font);
+        }
+
+        .particles {
+            .rectangle {
+                width: 40px;
+                height: 40px;
+                background-color: rgba(226, 219, 219, 0.5);
+                box-shadow: 9px 2px 13px rgba(41, 40, 40, 0.2);
+                border-radius: 6px;
+                position: absolute;
+                top: 10vw;
+                left: 44vw;
+                z-index: 1;
+                transform: rotate(45deg);
+
+                &._0 {
+                    top: 15vh;
+                    left: 19vw;
+                }
+
+                &._1 {
+                    top: 34vh;
+                    left: 73vw;
+                    transform: scale(0.8) rotate(20deg);
+                }
+
+                &._2 {
+                    top: 70vh;
+                    left: 89vw;
+                }
+
+                &._3 {
+                    top: 70vh;
+                    left: 9vw;
+                    transform: scale(0.7) rotate(20deg);
+                }
+            }
+        }
+    }
+}
+/* --------------hero styling------------------ */
+
+/* work section styling */
+#work {
+    margin: 0rem 3rem;
+
+    .work-title {
+        height: 13vh;
+        margin-bottom: 2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .work-grid {
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+        gap: 0.5rem;
+
+        &:nth-child(odd) {
+            grid-template-columns: 7fr 3fr;
+            padding-top: 0.5rem;
+        }
+
+        .work-item > img {
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5);
+            cursor: pointer;
+
+            &:hover {
+                filter: brightness(0.8);
+            }
+        }
+    }
+}
+/* --------work section styling----------------- */
+
+/* ido styling */
+#ido {
+    margin: 0rem 3rem;
+
+    .container {
+        padding: 5rem 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .ido-title {
+            width: 100%;
+            height: 13vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ido-content {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .ido-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+                    align-self: center;
+                }
+
+                h3 {
+                    font-size: calc(26px + 8 * ((100vw - 320px) / 680));
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+/* ----------------ido styling-------------------- */
+
+/* about me styling */
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        padding: 5rem 3rem;
+        width: 40%;
+
+        p {
+            text-align: center;
+            font-style: italic;
+        }
+    }
+
+    .parallax {
+        background-image: url(../public/assets/img_9.jpg);
+        height: 50vh;
+        width: 100%;
+        /* create parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+/* --------------about me styling------------------- */
+
+/* footer styling */
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0rem 3rem;
+
+    .container {
+        width: 100%;
+        padding: 10rem 0;
+        border-top: 1px solid var(--black-color);
+        border-bottom: 1px solid var(--black-color);
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+/* --------------footer styling-------------------- */
