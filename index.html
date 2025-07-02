@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio GSAP</title>
 
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css">
     <link rel="stylesheet" href="src/style.css">
 </head>
 
@@ -39,12 +40,32 @@
         <section class="hero-section">
             <div class="container">
                 <div class="hero-content">
-                    <div class="wrapper">
-                        <h1 class="title">Hi, I'm</h1>
+                    <div class="title">
+                        <div class="firstname">
+                            <span class="name">H</span>
+                            <span class="name">i</span>
+                            <span class="name">,</span>
+                        </div>
+                        <div class="lastname">
+                            <span class="name">I</span>
+                            <span class="name">'</span>
+                            <span class="name">m</span>
+                        </div>
                     </div>
-                    <div class="wrapper">
-                        <h1 class="title">John Doe</h1>
+                    <div class="title">
+                        <div class="firstname">
+                            <span class="name">J</span>
+                            <span class="name">o</span>
+                            <span class="name">h</span>
+                            <span class="name">n</span>
+                        </div>
+                        <div class="lastname">
+                            <span class="name">D</span>
+                            <span class="name">o</span>
+                            <span class="name">e</span>
+                        </div>
                     </div>
+
                     <p class="post">
                         Web Developer
                     </p>
@@ -64,45 +85,40 @@
         <section class="work-section" id="work">
             <div class="container">
 
-                <!-- work title -->
-                <div class="work-title">
-                    <h1 class="heading__title">Featured Work</h1>
-                </div>
+                <!-- Horizontal Scrolling -->
+                <div id="horizontal-scroll">
+                    <!-- work title -->
+                    <div class="work-title">
+                        <h1 class="heading__title">Featured Work</h1>
+                    </div>
 
-                <!-- grid layout -->
-                <div class="work-grid">
-                    <div class="work-item">
-                        <img src="public/assets/img_1.jpg" alt="work1">
-                    </div>
-                    <div class="work-item">
-                        <img src="public/assets/img_2.jpg" alt="work2">
-                    </div>
-                </div>
-
-                <div class="work-grid">
-                    <div class="work-item">
-                        <img src="public/assets/img_3.jpg" alt="work3">
-                    </div>
-                    <div class="work-item">
-                        <img src="public/assets/img_4.jpg" alt="work4">
-                    </div>
-                </div>
-
-                <div class="work-grid">
-                    <div class="work-item">
-                        <img src="public/assets/img_5.jpg" alt="work5">
-                    </div>
-                    <div class="work-item">
-                        <img src="public/assets/img_6.jpg" alt="work6">
-                    </div>
-                </div>
-
-                <div class="work-grid">
-                    <div class="work-item">
-                        <img src="public/assets/img_7.jpg" alt="work7">
-                    </div>
-                    <div class="work-item">
-                        <img src="public/assets/img_8.jpg" alt="work8">
+                    <div class="horizontal-scroll-wrapper">
+                        <div class="horizontal">
+                            <div>
+                                <img src="./assets/img_1.jpg" alt="img1">
+                            </div>
+                            <div>
+                                <img src="./assets/img_2.jpg" alt="img2">
+                            </div>
+                            <div>
+                                <img src="./assets/img_3.jpg" alt="img3">
+                            </div>
+                            <div>
+                                <img src="./assets/img_4.jpg" alt="img4">
+                            </div>
+                            <div>
+                                <img src="./assets/img_5.jpg" alt="img5">
+                            </div>
+                            <div>
+                                <img src="./assets/img_6.jpg" alt="img6">
+                            </div>
+                            <div>
+                                <img src="./assets/img_7.jpg" alt="img7">
+                            </div>
+                            <div>
+                                <img src="./assets/img_8.jpg" alt="img8">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -330,11 +346,11 @@
         <section class="about-section" id="about">
             <div class="container">
                 <div class="about-content">
-                    <h1 class="heading__title">About Me</h1>
+                    <h1 class="heading__title text">About Me</h1>
                 </div>
-                <p>
-                    I'am a Web Developer. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me to add your own content and make changes to the font. I'm a great place for you to tell a story.
-                </p>
+                <p class="text">I'm a Web Developer. Click here to add your own text and edit me. It’s easy. Just </p>
+                <p class="text">click “Edit Text” or double click me to add your own content and make changes to</p>
+                <p class="text">the font. I’m a great place for you to tell a story.</p>
             </div>
 
             <!-- cover image parallax effect -->
@@ -350,7 +366,9 @@
         <div class="container">
             <div class="flex">
                 <div class="left">
-                    <h1>Let's Create</h1>
+                    <div class="wrapper">
+                        <h1>Let's Create</h1>
+                    </div>
                     <button>Get in Touch</button>
                 </div>
                 <div class="right">
@@ -367,6 +385,9 @@
         </p>
     </footer>
     <!-- /footer -->
+
+    <!-- custom js file -->
+    <script type="module" src="src/script.js"></script>
 </body>
 
 </html>

@@ -158,6 +158,14 @@ header {
             font-family: var(--secondary-font);
             font-style: normal;
             line-height: 0.9;
+
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+
+            .firstname, .lastname {
+                display: flex;
+            }
         }
 
         .post {
@@ -218,6 +226,22 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .horizontal-scroll-wrapper {
+        overflow: hidden;
+        height: 625px;
+
+        .horizontal {
+            display: flex;
+            height: 100%;
+
+            & > div {
+                display: flex;
+                flex-shrink: 0;
+                padding: 0 5px;
+            }
+        }
     }
 
     .work-grid {
@@ -300,6 +324,16 @@ header {
     justify-content: center;
     align-items: center;
 
+    .text {
+        width: 100%;
+        color: rgb(182, 182, 182, 0.2);
+        background: linear-gradient(to right, var(--black-color), var(--black-color)) no-repeat;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-size: 0%;
+        transition: background-size cubic-bezier(.1,.5,.5,1) 0.5s;
+    }
+
     .container {
         padding: 5rem 3rem;
         width: 40%;
@@ -311,7 +345,7 @@ header {
     }
 
     .parallax {
-        background-image: url(../public/assets/img_9.jpg);
+        background-image: url(/assets/img_9.jpg);
         height: 50vh;
         width: 100%;
         /* create parallax scrolling effect */
@@ -319,6 +353,7 @@ header {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        transition: all 2s ease-out;
     }
 }
 /* --------------about me styling------------------- */
@@ -340,7 +375,51 @@ header {
         .flex {
             display: flex;
             justify-content: space-between;
+
+            .left {
+
+                .wrapper {
+                    overflow: hidden;
+                    margin: 2rem 0;
+
+                    h1 {
+                        line-height: 100px;
+                        transform: translateY(-150px);
+                    }
+                }
+
+                h1 {
+                    font-size: 6vw;
+                    color: var(--black-color);
+                }
+
+                button {
+                    padding: 1rem 4rem;
+                    font-size: 1vw;
+                    font-family: var(--primary-font);
+                    border: transparent;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #faa307;
+                        color: var(--white-color);
+                    }
+                }
+            }
+
+            .right {
+                h3 {
+                    font-size: 2vw;
+                    color: var(--black-color);
+                }
+            }
         }
+    }
+
+    p {
+        font-size: 1rem;
+        text-align: center;
+        padding: 2rem 0;
     }
 }
 /* --------------footer styling-------------------- */
